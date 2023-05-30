@@ -6,3 +6,14 @@ This hands-on project provides valuable insights into the process of database mi
 This project is not mine nor is it my idea. This project was completed with the instructions from https://github.com/acantril/learn-cantrill-io-labs, specifically the aws-dms-database-migration lab. This project was done as a learning experience and I take no credit from the source. With that being said, I added my own explanations to why each section and technology were used and how they all fit together to showcase what I've learned.
 
 ## Architecture Overview
+
+
+This Architecture/Project consists of five stages, each employing key AWS services:
+
+1. Provision the environment and review tasks (CloudFormation)
+2. Establish Private Connectivity Between the environments (VPC Peering)
+3. Create and Configure the AWS Infrastructure (EC2 and DB)
+4. Migrate Database and Cutover (DMS)
+5. Cleanup
+
+## Key Features
