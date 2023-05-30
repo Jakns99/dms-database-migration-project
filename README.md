@@ -36,3 +36,10 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 - This step involved delving into the Routes of my new public and private route tables. This involved adding the IP 192.168.10.0/24 Peering Connection to my Public Route Table and 192.168.10.0/24 to my Private table.
 
 **Explanation**: By creating these peering connections and routes, I am effectively setting up the VPC for secure and seamless connectivity between the On-Premises and AWS environments. The peering connection allows for direct network routing between the two VPCs, enabling instances in each VPC to communicate with each other as if they were within the same network. Meanwhile, the new routes ensure that traffic destined for the 192.168.10.0/24 IP range is correctly directed via the peering connection. This setup forms the basis for the efficient and secure data transfer that is crucial for the subsequent database migration process.
+
+## 3A. Create the RDS Instance
+ - This step had me provisioning an RDS DB Subnet Group and a MariaDB Database instance.
+ - A DB subnet group is a collection of subnets that you designate for your DB instances in the VPC, and allows the RDS instance to use multiple AZ.
+ - The MariaDB instance was configured with the settings provided by the project, such as instance specs, storage capacity, security groups etc. The setup for the RDS instance normally takes a long time, so I moved on to the next steps while it was provisioning.
+
+## 3B. 
