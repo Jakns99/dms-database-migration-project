@@ -31,3 +31,8 @@ This Architecture/Project consists of five stages, each employing key AWS servic
  ## 2A. Create VPC Peering Connections
   - This step had me creating a VPC peering connection between the On-Premises and AWS environments. 
   - The process of peering is very simple, and it involves provisioning a peering connection via VPC's peering connection tab. The requester was onpremVPC and the Accepter was awsVPC. Next, I accepted the request to confirm the peering connection.
+
+## 2B. Create Routes
+- This step involved delving into the Routes of my new public and private route tables. This involved adding the IP 192.168.10.0/24 Peering Connection to my Public Route Table and 192.168.10.0/24 to my Private table.
+
+**Explanation**: By creating these peering connections and routes, I am effectively setting up the VPC for secure and seamless connectivity between the On-Premises and AWS environments. The peering connection allows for direct
