@@ -27,3 +27,7 @@ This Architecture/Project consists of five stages, each employing key AWS servic
  
  ## 1. Provision Environment and Tasks
   - The first step was to set up the lab environment using a CloudFormation stack. The lab generously provides a couple of resources to start off the project, such as a starter VPC without routes as to let me create them, a couple of EC2 instances, and a few password and username credentials. Base lab infrastructure was provided to allow for focused efforts on learning.
+
+ ## 2A. Create VPC Peering Connections
+  - This step had me creating a VPC peering connection between the On-Premises and AWS environments. 
+  - The process of peering is very simple, and it involves provisioning a peering connection via VPC's peering connection tab. The requester was onpremVPC and the Accepter was awsVPC. Next, I accepted the request to confirm the peering connection.
