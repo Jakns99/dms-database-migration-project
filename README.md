@@ -44,3 +44,4 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 
 ## 3B + 3C. Create the EC2 Instance and Install Wordpress
  - This step involved the creation of an instance named awsCatWeb. This step included the choosing of an AMI, which was Linux 2 AMI (HVM), the VPC I edited earlier, an IAM Instance Profile, and choosing to move on without a key pair.
+ - Once the instance was ready, I connected to it via Session Manager and ran a sudo bash command to run a privileged bash shell. Once a few commands were run, I ran `yum -y install httpd mariadb` to install the apache web server, and then `amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2 ` to instasll php.
