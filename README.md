@@ -42,4 +42,5 @@ This Architecture/Project consists of five stages, each employing key AWS servic
  - A DB subnet group is a collection of subnets that you designate for your DB instances in the VPC, and allows the RDS instance to use multiple AZ.
  - The MariaDB instance was configured with the settings provided by the project, such as instance specs, storage capacity, security groups etc. The setup for the RDS instance normally takes a long time, so I moved on to the next steps while it was provisioning.
 
-## 3B. 
+## 3B + 3C. Create the EC2 Instance and Install Wordpress
+ - This step involved the creation of an instance named awsCatWeb. This step included the choosing of an AMI, which was Linux 2 AMI (HVM), the VPC I edited earlier, an IAM Instance Profile, and choosing to move on without a key pair.
