@@ -17,3 +17,5 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 5. Cleanup
 
 ## Key Features
+- **Database Migration**: Leveraging AWS Database Migration Service(DMS), the project effectively migrates a MariaDB database from a simulated on-premises environment to an AWS managed SQL database in RDS. This service simplifies the migration process, mitigating risks and minimizing downtime.
+- **Private Connectivity(VPC)**: To maintain a secure and reliable connection, the project establishes a Virtual Private Cloud (VPC) peering connection between the simulated on-premises and AWS environment
