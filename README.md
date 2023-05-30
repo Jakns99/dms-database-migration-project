@@ -20,3 +20,10 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 - **Database Migration (DMS)**: Leveraging AWS Database Migration Service(DMS), the project effectively migrates a MariaDB database from a simulated on-premises environment to an AWS managed SQL database in RDS. This service simplifies the migration process, mitigating risks and minimizing downtime.
 - **Private Connectivity (VPC)**: To maintain a secure and reliable connection, the project establishes a Virtual Private Cloud (VPC) peering connection between the simulated on-premises and AWS environments. This ensures seamless, secure networking and efficient data transfer during the data migration process.
 - **Managed AWS Services (EC2/RDS)**: By using managed AWS services like EC2 for web hosting and RDS for database management, the project demonstrates how to offload server management tasks to AWS, enabling users to focus more on application development.
+
+
+# Project Setup/How I Completed This Project
+ This project was established and configured manually utilizing the AWS Management Console with a provided CloudFormation template. Here's a step-by-step outline of the setup process:
+ 
+ ## 1. Provision Environment and Tasks
+  - The first step was to set up the lab environment using CloudFormation. The lab generously provides a couple of resources to start off the project, such as a starter VPC without routes as to let me create them, a couple of EC2 instances, and a few password and username credentials. Base lab infrastructure was provided to allow for focused efforts on learning.
