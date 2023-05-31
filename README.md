@@ -55,7 +55,10 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 ## 3B + 3C. Create the EC2 Instance and Install Wordpress
  - This step involved the creation of an instance named awsCatWeb. This step included the choosing of an AMI, which was Linux 2 AMI (HVM), the VPC I edited earlier, an IAM Instance Profile, and choosing to move on without a key pair.
  - Once the instance was ready, I connected to it via Session Manager and ran a sudo bash command to run a privileged bash shell. Once a few commands were run, I ran `yum -y install httpd mariadb` to install the apache web server, and then `amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2 ` to install php.
- - At this point, I now had a functioning apache web server.
+ - At this point, I now had a functioning apache web server. 
+ - The details behind the cat website below were created by the original project creators. I provisioned it for learning purposes.
+
+![CatWeb](/Data%20Migration/CATWEB%20instance.png)
 
 ## 3D + 3E. Migrate Wordpress Content over and Fix up Permissions and Verify Server Functionality
  - In this step I ran a `nano /etc/ssh/sshd_config` edit to allow password authentication with the CloudFormation stack passwords.
