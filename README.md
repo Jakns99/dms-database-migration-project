@@ -66,3 +66,22 @@ sudo systemctl restart httpd
 Finally, permissions and ownership were configured on the AWS web server to ensure secure and efficient access to the WordPress files. The Apache group was given the necessary permissions to the '/var/www' directory and its contents, ensuring that the web server can correctly serve the WordPress application.
 
 
+## 4A. Create the DMS Subnet Group
+
+## 4B. Create DMS Replication Instance
+
+## 4C and 4D. Create the DMS Source Endpoint and Destination Endpoint (RDS)
+
+## 4E and 4F. Migrate
+
+## 4G Cutover Application Instance
+
+
+
+
+
+
+
+
+
+
