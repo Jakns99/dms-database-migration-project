@@ -59,7 +59,7 @@ find /var/www -type d -exec chmod 2775 {} \;
 find /var/www -type f -exec chmod 0664 {} \;
 sudo systemctl restart httpd
 ```
-
+- This script was used to  configure permissions and ownership for the web server in a Linux environment. It added the ec2-user to the apache group, changed the ownership of the "/var/www" directory to ec2-user and apache, and set directory and file permissions to ensure that both the user and group can read, write and execute files. Lastly, it restarts the httpd service to apply these changes.
 
 
 
