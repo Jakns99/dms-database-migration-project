@@ -35,7 +35,7 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 ## 2B. Create Routes
 - This step involved delving into the Routes of my new public and private route tables. This involved adding the IP 192.168.10.0/24 Peering Connection to my Public Route Table and 192.168.10.0/24 to my Private table.
 
-**Explanation**: By creating these peering connections and routes, I am effectively setting up the VPC for secure and seamless connectivity between the On-Premises and AWS environments. The peering connection allows for direct network routing between the two VPCs, enabling instances in each VPC to communicate with each other as if they were within the same network. Meanwhile, the new routes ensure that traffic destined for the 192.168.10.0/24 IP range is correctly directed via the peering connection. This setup forms the basis for the efficient and secure data transfer that is crucial for the subsequent database migration process.
+**Explanation for Step 2**: By creating these peering connections and routes, I am effectively setting up the VPC for secure and seamless connectivity between the On-Premises and AWS environments. The peering connection allows for direct network routing between the two VPCs, enabling instances in each VPC to communicate with each other as if they were within the same network. Meanwhile, the new routes ensure that traffic destined for the 192.168.10.0/24 IP range is correctly directed via the peering connection. This setup forms the basis for the efficient and secure data transfer that is crucial for the subsequent database migration process.
 
 ## 3A. Create the RDS Instance
  - This step had me provisioning an RDS DB Subnet Group and a MariaDB Database instance.
