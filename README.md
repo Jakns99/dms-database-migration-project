@@ -97,6 +97,11 @@ $SQL_COMMAND "UPDATE wp_postmeta SET meta_value = replace(meta_value,'$OLD_URL',
 
 **Explanation for Step 4**: This was the centerpiece of the project after all of the setup. This step focused on setting up AWS Database Migration Service (DMS) to migrate the database from the on-premises environment to the AWS environment. AWS DMS conducted a seamless database transition, reducing downtime during the migration process. Ultimately, the aim was to streamline the transition to the AWS environment, thus creating a scalable foundation for future work on the system. This project effectively simulated a transition from an on-prem database to AWS via EC2, since I had no access to a real on-prem database.
 
-
+## 5. Cleanup
+ - The easiest step, I first cleaned up the EC2 instances (CatWeb and CatDB) by stopping them. I terminated awsCatWeb
+ - For RDS, I terminated the RDS instance created earlier, unchecking all boxes to prevent further costs due to backup storage.
+ - Next, DMS termination was simple, I deleted the migration task, the replication instances, the endpoints, and the subnet group
+ - Deleting the VPC involved manually checking each route table and deleting the peer routes and peering connection created earlier. This concludes the deletion of the manually created resources
+ - Lastly, I deleted the DMS Stack in CloudFormation, effectively removing all provisioned resources for the project.
 
 
