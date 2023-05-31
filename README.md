@@ -67,9 +67,10 @@ Finally, permissions and ownership were configured on the AWS web server to ensu
 
 
 ## 4A. Create the DMS Subnet Group
+- Firstly, I created a DMS subnet group, which is a collection of subnets that DMS will use when creating the replication instance
 
 ## 4B. Create DMS Replication Instance
-
+- 
 ## 4C and 4D. Create the DMS Source Endpoint and Destination Endpoint (RDS)
 
 ## 4E and 4F. Migrate
