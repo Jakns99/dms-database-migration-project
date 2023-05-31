@@ -61,7 +61,7 @@ sudo systemctl restart httpd
 ```
 - This script was used to  configure permissions and ownership for the web server in a Linux environment. It added the ec2-user to the apache group, changed the ownership of the "/var/www" directory to ec2-user and apache, and set directory and file permissions to ensure that both the user and group can read, write and execute files. Lastly, it restarts the httpd service to apply these changes.
 
-**Explanation for Step 3**: This entire step is fundamental in building the AWS side of the infrastructure for the database migration process. It began by setting up an RDS instance that will host the migrated MariaDB database. The use of a DB Subnet Group ensures high availability by allowing the RDS instance to span multiple Availability Zones.
+**Explanation for Step 3**: This entire step is fundamental in building the AWS side of the infrastructure for the database migration process. It began by setting up an RDS instance that will host the migrated MariaDB database. Once the database setup was in progress, an EC2 instance was created to serve as the new webserver for the WordPress application. This involved the installation of an Apache web server and PHP, setting up the foundation for the application layer of the architecture. Following this, the WordPress content was migrated from the on-premises environment to the newly created AWS environment. This migration essentially transfers the WordPress application files from the on-premises instance (CatWeb) to the new AWS EC2 instance (awsCatWeb).
 
 
 
