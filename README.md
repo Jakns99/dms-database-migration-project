@@ -63,5 +63,6 @@ sudo systemctl restart httpd
 
 **Explanation for Step 3**: This entire step is fundamental in building the AWS side of the infrastructure for the database migration process. It began by setting up an RDS instance that will host the migrated MariaDB database. Once the database setup was in progress, an EC2 instance was created to serve as the new webserver for the WordPress application. This involved the installation of an Apache web server and PHP, setting up the foundation for the application layer of the architecture. Following this, the WordPress content was migrated from the on-premises environment to the newly created AWS environment. This migration essentially transfers the WordPress application files from the on-premises instance (CatWeb) to the new AWS EC2 instance (awsCatWeb).
 
+Finally, permissions and ownership were configured on the AWS web server to ensure secure and efficient access to the WordPress files. The Apache group was given the necessary permissions to the '/var/www' directory and its contents, ensuring that the web server can correctly serve the WordPress application.
 
 
