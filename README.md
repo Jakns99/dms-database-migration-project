@@ -73,8 +73,9 @@ Finally, permissions and ownership were configured on the AWS web server to ensu
 - Then, I created a DMS replication instance.
 - Replication instances perform the actual data migration tasks, including extracting data from the source database, formatting the data for consumption by the target database, and loading the data into the target database.
 ## 4C and 4D. Create the DMS Source Endpoint and Destination Endpoint (RDS)
-
-## 4E and 4F. Migrate
+- Following this, I then set up the DMS Source and Destination (target) endpoints.
+- The Source Endpoint pointed to the MariaDB on the on-prem EC2 instance (CatDB), while the target endpoint points to the MariaDB instance on RDS (a4lwordpress).
+## 4E and 4F. Test the Endpoints and Migrate
 
 ## 4G Cutover Application Instance
 
