@@ -95,6 +95,7 @@ $SQL_COMMAND "UPDATE wp_postmeta SET meta_value = replace(meta_value,'$OLD_URL',
 ```
 - This step completed the migration of the application to the AWS environment, making the AWS RDS instance the new live database.
 
+**Explanation for Step 4** This was the centerpiece of the project after all of the setup. This step focused on setting up AWS Database Migration Service (DMS) to migrate the database from the on-premises environment to the AWS environment
 
 
 
