@@ -85,6 +85,9 @@ Finally, permissions and ownership were configured on the AWS web server to ensu
 ## 4B. Create DMS Replication Instance
 - Then, I created a DMS replication instance.
 - Replication instances perform the actual data migration tasks, including extracting data from the source database, formatting the data for consumption by the target database, and loading the data into the target database.
+
+![Replication](/Data%20Migration/DMS%20Replication%20Instance.png)
+
 ## 4C and 4D. Create the DMS Source Endpoint and Destination Endpoint (RDS)
 - Following this, I then set up the DMS Source and Destination (target) endpoints.
 - The Source Endpoint pointed to the MariaDB on the on-prem EC2 instance (CatDB), while the target endpoint points to the MariaDB instance on RDS (a4lwordpress).
@@ -94,6 +97,10 @@ Finally, permissions and ownership were configured on the AWS web server to ensu
 ## 4E and 4F. Test the Endpoints and Migrate
 - After setting up the endpoints, I tested the connection between them to ensure that the DMS replication instance can successfully access both the source and target databases.
 - Next, I created a migration taks to transfer the database data from the source to the target endpoint. This task specified what data is to be migrated, how it should be migrated, and where it should be migrated to.
+
+![MigStart](/Data%20Migration/DMS%20Migration%20Start.png)
+
+![MigEnd](/Data%20Migration/DMS%20Complete.png)
 ## 4G Cutover Application Instance
 - Finally, after the data migration task completed and the data was successfully loaded into the RDS instance, the final cutover step involved updating the WordPress application to point to the new RDS database instance.
 - This was done by updating the 'DB_HOST' line in the WordPress wp-config.php file to point to the RDS instance's endpoint. A script was also run to update the WordPress database with the new AWS instance DNS name. It is listed below.
