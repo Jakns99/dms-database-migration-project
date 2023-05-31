@@ -61,7 +61,7 @@ sudo systemctl restart httpd
 ```
 - This script was used to  configure permissions and ownership for the web server in a Linux environment. It added the ec2-user to the apache group, changed the ownership of the "/var/www" directory to ec2-user and apache, and set directory and file permissions to ensure that both the user and group can read, write and execute files. Lastly, it restarts the httpd service to apply these changes.
 
-
+**Explanation for Step 3**: This entire step is fundamental in building the AWS side of the infrastructure for the database migration process. It began by setting up an RDS instance that will host the migrated MariaDB database. The use of a DB Subnet Group ensures high availability by allowing the RDS instance to span multiple Availability Zones.
 
 
 
