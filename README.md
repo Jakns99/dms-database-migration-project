@@ -46,6 +46,10 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 ## 3A. Create the RDS Instance
  - This step had me provisioning an RDS DB Subnet Group and a MariaDB Database instance.
  - A DB subnet group is a collection of subnets that you designate for your DB instances in the VPC, and allows the RDS instance to use multiple AZ.
+
+![DB Subnet Groups](/Data%20Migration/DB%20Subnet%20Groups.png)
+
+
  - The MariaDB instance was configured with the settings provided by the project, such as instance specs, storage capacity, security groups etc. The setup for the RDS instance normally takes a long time, so I moved on to the next steps while it was provisioning.
 
 ## 3B + 3C. Create the EC2 Instance and Install Wordpress
