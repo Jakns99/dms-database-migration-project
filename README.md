@@ -66,6 +66,10 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 ![Nano](/Data%20Migration/Nano%20example.png)
 
  - Once this was complete, I connected to the stack provisioned CatWeb instance with Session Manager, with a `sudo bash` command, I ran a provided command to copy the wordpress files over from CatWeb to awsCatWeb, which was essentially transferring on-prem data to aws.
+
+![WordpressMigrate](/Data%20Migration/Migrating%20wordpress%20content%20over.png)
+- This snapshot above is a picture I took while it was running.
+
  - Lastly, I ran this provided command
  ```
 usermod -a -G apache ec2-user   
