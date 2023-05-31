@@ -70,7 +70,8 @@ Finally, permissions and ownership were configured on the AWS web server to ensu
 - Firstly, I created a DMS subnet group, which is a collection of subnets that DMS will use when creating the replication instance
 
 ## 4B. Create DMS Replication Instance
-- 
+- Then, I created a DMS replication instance.
+- Replication instances perform the actual data migration tasks, including extracting data from the source database, formatting the data for consumption by the target database, and loading the data into the target database.
 ## 4C and 4D. Create the DMS Source Endpoint and Destination Endpoint (RDS)
 
 ## 4E and 4F. Migrate
