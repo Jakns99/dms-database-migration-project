@@ -59,6 +59,9 @@ This Architecture/Project consists of five stages, each employing key AWS servic
 
 ## 3D + 3E. Migrate Wordpress Content over and Fix up Permissions and Verify Server Functionality
  - In this step I ran a `nano /etc/ssh/sshd_config` edit to allow password authentication with the CloudFormation stack passwords.
+
+![Nano](/Data%20Migration/Nano%20example.png)
+
  - Once this was complete, I connected to the stack provisioned CatWeb instance with Session Manager, with a `sudo bash` command, I ran a provided command to copy the wordpress files over from CatWeb to awsCatWeb, which was essentially transferring on-prem data to aws.
  - Lastly, I ran this provided command
  ```
