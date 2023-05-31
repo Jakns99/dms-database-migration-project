@@ -27,6 +27,8 @@ This Architecture/Project consists of five stages, each employing key AWS servic
  
  ## 1. Provision Environment and Tasks
   - The first step was to set up the lab environment using a CloudFormation stack. The lab generously provides a couple of resources to start off the project, such as a starter VPC without routes as to let me create them, a couple of EC2 instances, and a few password and username credentials. Base lab infrastructure was provided to allow for focused efforts on learning.
+  
+  ![Cloudformation](/Data%20Migration/Cloudformation.png)
 
  ## 2A. Create VPC Peering Connections
   - This step had me creating a VPC peering connection between the On-Premises and AWS environments. 
