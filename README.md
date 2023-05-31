@@ -80,6 +80,7 @@ Finally, permissions and ownership were configured on the AWS web server to ensu
 - Next, I created a migration taks to transfer the database data from the source to the target endpoint. This task specified what data is to be migrated, how it should be migrated, and where it should be migrated to.
 ## 4G Cutover Application Instance
 - Finally, after the data migration task completed and the data was successfully loaded into the RDS instance, the final cutover step involved updating the WordPress application to point to the new RDS database instance.
+- This was done by updating the 'DB_HOST' line in the WordPress wp-config.php file to point to the RDS instance's endpoint. A script was also run to update the WordPress database with the new AWS instance DNS name. It is listed below.
 ```
 #!/bin/bash
 source <(php -r 'require("/var/www/html/wp-config.php"); echo("DB_NAME=".DB_NAME."; DB_USER=".DB_USER."; DB_PASSWORD=".DB_PASSWORD."; DB_HOST=".DB_HOST); ')
@@ -92,7 +93,7 @@ $SQL_COMMAND "UPDATE wp_posts SET post_content = replace(post_content, '$OLD_URL
 $SQL_COMMAND "UPDATE wp_postmeta SET meta_value = replace(meta_value,'$OLD_URL','http://$HOST');"
 
 ```
-
+- This step completed the migration of the application to the AWS environment, making the AWS RDS instance the new live database.
 
 
 
