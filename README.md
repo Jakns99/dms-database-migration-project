@@ -76,7 +76,8 @@ Finally, permissions and ownership were configured on the AWS web server to ensu
 - Following this, I then set up the DMS Source and Destination (target) endpoints.
 - The Source Endpoint pointed to the MariaDB on the on-prem EC2 instance (CatDB), while the target endpoint points to the MariaDB instance on RDS (a4lwordpress).
 ## 4E and 4F. Test the Endpoints and Migrate
-
+- After setting up the endpoints, I tested the connection between them to ensure that the DMS replication instance can successfully access both the source and target databases.
+- Next, I created a migration taks to transfer the database data from the source to the target endpoint. This task specified what data is to be migrated, how it should be migrated, and where it should be migrated to.
 ## 4G Cutover Application Instance
 
 
